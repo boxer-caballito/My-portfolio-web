@@ -1,0 +1,152 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.all-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 150px;
+
+}
+
+.info-personal{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    transition: all .20s ease-in-out;
+}
+
+@media(width <= 964px) {
+    .info-personal{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 40px;
+        transition: all .20s ease-in-out;
+    }
+}
+
+@media(width <= 764px) {
+    .info-personal{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 10px;
+        transition: all .20s ease-in-out;
+    }
+}
+
+.image-personal {
+    width: 15%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px 2px #4c4a4a;
+}
+
+.bb {
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.html-image {
+    width: 50px;
+    height: auto;
+    margin: 20px;
+}
+
+.html-image:hover {
+    transform: scale(1.1);
+    transition: all .20s ease-in-out;
+}
+
+.css-image {
+    width: 40px;
+    height: auto;
+    margin: 20px;
+}
+
+.css-image:hover {
+    transform: scale(1.1);
+    transition: all .20s ease-in-out;
+}
+
+.info-text {
+    width: 25%;
+    height: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px #4c4a4a;
+    top: 80px;
+    right: 90px;
+    border-radius: 20px 20px 0 20px;
+}
+
+.main-h4 {
+    margin: 10px;
+}
+
+.red-text {
+    color: brown;
+}
+
+@media(width <= 764px) {
+    .all-main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: center;
+    
+    }
+
+    .info-text {
+        margin-top: 50px;
+        padding: 10px;
+        width: 42%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        left: 10px;
+    }
+}
+
+@media(width <= 964px) {
+    .all-main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+    
+    }
+
+    .info-text {
+        margin-top: 50px;
+        padding: 15px;
+        width: 72%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        position: relative;
+        top: 39px;
+        right: 0px;
+    }
+}
