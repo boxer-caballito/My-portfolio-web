@@ -147,11 +147,45 @@ class Header extends React.Component {
             elemento.style.borderRadius = "0px 0px 20px 20px"
         });
 
+        btn1.forEach(elemento => {
+            elemento.addEventListener("mouseover", () => {
+                elemento.style.border = "border: 1px #000 solid";
+                elemento.style.backgroundColor = "#000";
+                elemento.style.color = "white"
+                elemento.style.borderRadius = "20px"
+                // Cambia a color rojo al hacer hover con JavaScript
+            });
+      
+            elemento.addEventListener("mouseout", () => {
+              elemento.style.color = "white"; 
+              elemento.style.backgroundColor = "#000";
+              elemento.style.borderRadius = "0px 0px 20px 20px"
+              // Restaura el color original al salir del hover
+            });
+          });
+
         btn2.forEach((elemento) => {
             elemento.style.backgroundColor = "#000";
             elemento.style.color = "white";
             elemento.style.borderRadius = "0px 0px 20px 20px"
         });
+
+        btn2.forEach(elemento => {
+            elemento.addEventListener("mouseover", () => {
+                elemento.style.border = "border: 1px #000 solid";
+                elemento.style.backgroundColor = "#000";
+                elemento.style.color = "white"
+                elemento.style.borderRadius = "20px"
+                // Cambia a color rojo al hacer hover con JavaScript
+            });
+      
+            elemento.addEventListener("mouseout", () => {
+              elemento.style.color = "white"; 
+              elemento.style.backgroundColor = "#000";
+              elemento.style.borderRadius = "0px 0px 20px 20px"
+              // Restaura el color original al salir del hover
+            });
+          });
 
         btn3.forEach((elemento) => {
             elemento.style.backgroundColor = "#000";
@@ -162,6 +196,23 @@ class Header extends React.Component {
         dark.forEach((elemento) => {
             elemento.style.border = "2px solid red";
         });
+
+        btn3.forEach(elemento => {
+            elemento.addEventListener("mouseover", () => {
+                elemento.style.border = "border: 1px #000 solid";
+                elemento.style.backgroundColor = "#000";
+                elemento.style.color = "white"
+                elemento.style.borderRadius = "20px"
+                // Cambia a color rojo al hacer hover con JavaScript
+            });
+      
+            elemento.addEventListener("mouseout", () => {
+              elemento.style.color = "white"; 
+              elemento.style.backgroundColor = "#000";
+              elemento.style.borderRadius = "0px 0px 20px 20px"
+              // Restaura el color original al salir del hover
+            });
+          });
 
         
         light.forEach((elemento) => {
