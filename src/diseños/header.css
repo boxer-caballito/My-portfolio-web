@@ -71,8 +71,8 @@
 
 .ligth:hover {
   transform: scale(1.1);
-  background-color: #e9d5a1;
-  color: rgb(255, 255, 255);
+  background-color: #56ff83;
+  color: white;
   transition: all .20s ease-in-out;
 }
 

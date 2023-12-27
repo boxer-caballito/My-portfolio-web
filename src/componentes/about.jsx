@@ -19,7 +19,10 @@ class About extends React.Component {
 
   render() {
     return (
-      <div className="all-main">
+      <div className="seccion-paf">
+        <br/>
+        <h4 className="txt-paf" onClick={this.aplicarTraduccion}>Sobre mi:</h4>
+      <div id="about-section" className="all-main">
         <div className="info-personal" data-aos="fade-right">
         <img  src="https://www.svgrepo.com/show/508668/flag-us.svg" className="image-personal" data-aos="fade-down"/>
         <h4 className="bb" onClick={this.aplicarTraduccion}>
@@ -40,6 +43,7 @@ class About extends React.Component {
           <h3 onClick={this.aplicarTraduccion} className="saludo">Hola <span className="red-text">:)</span></h3>
           <h4 className="main-h4" onClick={this.aplicarTraduccion}>Soy Evan Alberto Aguilar Garcia,un apasionado estudiante de front-end web. Mi fascinación por la creación de experiencias digitales visualmente atractivas y funcionalmente sólidas me impulsa a explorar y aprender  constantemente en este emocionante campo. ¡Bienvenido a mi mundo, donde la creatividad se encuentra con la tecnología para dar vida a ideas innovadoras</h4>
         </div>
+      </div>
       </div>
     );
   }

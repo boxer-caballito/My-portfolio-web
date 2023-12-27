@@ -1,10 +1,15 @@
 import React from "react";
 import "../diseños/header.css";
 import About from "./about";
+import { Link } from 'react-scroll';
 
 class Header extends React.Component {
 
-
+    scrollToAbout = () => {
+        const aboutSection = document.querySelector('.txt-paf');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      };
+    
 
     //cambiar colores
 
@@ -18,7 +23,12 @@ class Header extends React.Component {
         let red = document.querySelectorAll(".name");
         let dark = document.querySelectorAll(".dark");
         let light = document.querySelectorAll(".ligth");
-
+        const body = document.querySelector('body');
+        let about = document.querySelectorAll('.txt-paf');
+        let bb = document.querySelectorAll('.bb');
+        let saludo = document.querySelectorAll('.saludo');
+        let info = document.querySelectorAll(".main-h4");
+        let infoTexto = document.querySelectorAll(".info-text");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#e9d5a1";
@@ -111,6 +121,31 @@ class Header extends React.Component {
         dark.forEach((elemento) => {
             elemento.style.border = "none";
         });
+
+        body.style.backgroundColor = 'white'; 
+
+        about.forEach((elemento) => {
+            elemento.style.color = "brown";
+        });
+
+        
+        bb.forEach((elemento) => {
+            elemento.style.color = "black";
+        });
+
+        saludo.forEach((elemento) => {
+            elemento.style.color = "black";
+        });
+
+        info.forEach((elemento) => {
+            elemento.style.color = "black";
+        });
+
+        
+        infoTexto.forEach((elemento) => {
+            elemento.style.backgroundColor = "white";
+        });
+
     }
 
     lightFondo = () => {
@@ -123,7 +158,12 @@ class Header extends React.Component {
         let red = document.querySelectorAll(".name");
         let dark = document.querySelectorAll(".dark");
         let light = document.querySelectorAll(".ligth");
-
+        const body = document.querySelector('body');
+        let about = document.querySelectorAll('.txt-paf');
+        let bb = document.querySelectorAll('.bb');
+        let saludo = document.querySelectorAll(".saludo");
+        let info = document.querySelectorAll(".main-h4");
+        let infoTexto = document.querySelectorAll(".info-text");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#282828";
@@ -218,6 +258,30 @@ class Header extends React.Component {
         light.forEach((elemento) => {
             elemento.style.border = "none";
         });
+
+        body.style.backgroundColor = "#bdbdbd";
+
+        about.forEach((elemento) => {
+            elemento.style.color = "white";
+        });
+
+                
+        bb.forEach((elemento) => {
+            elemento.style.color = "white";
+        });
+
+        saludo.forEach((elemento) => {
+            elemento.style.color = "white";
+        });
+
+        info.forEach((elemento) => {
+            elemento.style.color = "white";
+        });
+
+        infoTexto.forEach((elemento) => {
+            elemento.style.backgroundColor = "#4c4a4a";
+        });
+
     }
 
     //funcion de calback para la opacidad de la bandera de MEXICO
@@ -262,7 +326,8 @@ class Header extends React.Component {
             infoPersonal: "Soy Evan Alberto Aguilar Garcia,un apasionado estudiante de front-end web. Mi fascinación por la creación de experiencias digitales visualmente atractivas y funcionalmente sólidas me impulsa a explorar y aprender constantemente en este emocionante campo. ¡Bienvenido a mi mundo, donde la creatividad se encuentra con la tecnología para dar vida a ideas innovadoras",
             light: "claro",
             dark: "oscuro",
-            saludo:"Hola :)"
+            saludo:"Hola :)",
+            about: "sobre mi:"
         },
         ingles: {
             text1: "I am a student of front-end oriented web programming",
@@ -275,7 +340,8 @@ class Header extends React.Component {
             infoPersonal: "I am Evan Alberto Aguilar García, a passionate student of web front-end. My fascination with creating visually engaging and functionally sound digital experiences drives me to explore and learn. constantly in this exciting field.Welcome to my world, where creativity meets technology to bring innovative ideas to life",
             light: "light",
             dark: "dark",
-            saludo:"Hi :)"
+            saludo:"Hi :)",
+            about: "about:"
         },
     };
 
@@ -291,6 +357,7 @@ class Header extends React.Component {
         var light = document.querySelector(".pLight");
         var dark = document.querySelector(".pDark");
         var saludo = document.querySelector(".saludo");
+        var about = document.querySelector(".txt-paf");
 
 
         const traduccionesIdioma = this.traducciones[idioma];
@@ -306,7 +373,8 @@ class Header extends React.Component {
             infoPersonal.innerHTML === traduccionesIdioma.infoPersonal &&
             light.innerHTML === traduccionesIdioma.light &&
             dark.innerHTML === traduccionesIdioma.dark &&
-            saludo.innerHTML === traduccionesIdioma.saludo
+            saludo.innerHTML === traduccionesIdioma.saludo &&
+            about.innerHTML === traduccionesIdioma.about
         ) {
             alert("El texto ya está traducido al " + idioma);
         } else {
@@ -321,6 +389,7 @@ class Header extends React.Component {
             light.innerHTML = traduccionesIdioma.light;
             dark.innerHTML = traduccionesIdioma.dark;
             saludo.innerHTML = traduccionesIdioma.saludo;
+            about.innerHTML = traduccionesIdioma.about
         }
     };
 
@@ -331,7 +400,8 @@ class Header extends React.Component {
                 <div className="navBar">
                     <button className="btn1">proyectos</button>
                     <button className="btn2">contacto</button>
-                    <button className="btn3">acerca de mi</button>
+                    <button className="btn3" onClick={this.scrollToAbout}>acerca de mi</button>
+
                 </div>
                 <div className="head-info">
                     <img
@@ -347,7 +417,7 @@ class Header extends React.Component {
                         <img src="https://www.svgrepo.com/show/503805/sun.svg" className="sun" alt="sun"/>
                         </button>
                         <button className="dark" onClick={this.lightFondo}><p className="pDark">oscuro</p> <br/>
-                        <img src="https://www.svgrepo.com/show/529732/moon-stars.svg" alt="moon" className="moon" />
+                        <img src="https://www.svgrepo.com/show/440502/moon-full-moon.svg" alt="moon" className="moon" />
                         </button>
                     </div>
                     <div className="main-content-flag">
