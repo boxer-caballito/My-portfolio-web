@@ -1,12 +1,18 @@
 import React from "react";
 import "../diseños/header.css";
 import About from "./about";
+import Proyects from "./proyects";
 import { Link } from 'react-scroll';
 
 class Header extends React.Component {
 
     scrollToAbout = () => {
         const aboutSection = document.querySelector('.txt-paf');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      scrollToProyects = () => {
+        const aboutSection = document.querySelector('.txt-proyects');
         aboutSection.scrollIntoView({ behavior: 'smooth' });
       };
     
@@ -29,6 +35,8 @@ class Header extends React.Component {
         let saludo = document.querySelectorAll('.saludo');
         let info = document.querySelectorAll(".main-h4");
         let infoTexto = document.querySelectorAll(".info-text");
+        let fondoProyectos = document.querySelectorAll(".all-content");
+        let text2 = document.querySelectorAll(".text-2");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#e9d5a1";
@@ -146,6 +154,14 @@ class Header extends React.Component {
             elemento.style.backgroundColor = "white";
         });
 
+        fondoProyectos.forEach((elemento) => {
+            elemento.style.backgroundColor = "#e9d5a1";
+        });
+
+        text2.forEach((elemento) => {
+            elemento.style.color = "black";
+        });
+
     }
 
     lightFondo = () => {
@@ -164,6 +180,8 @@ class Header extends React.Component {
         let saludo = document.querySelectorAll(".saludo");
         let info = document.querySelectorAll(".main-h4");
         let infoTexto = document.querySelectorAll(".info-text");
+        let fondoProyectos = document.querySelectorAll(".all-content");
+        let text2 = document.querySelectorAll(".text-2");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#282828";
@@ -267,19 +285,25 @@ class Header extends React.Component {
 
                 
         bb.forEach((elemento) => {
-            elemento.style.color = "white";
+            elemento.style.color = "black";
         });
 
         saludo.forEach((elemento) => {
-            elemento.style.color = "white";
+            elemento.style.color = "black";
         });
 
         info.forEach((elemento) => {
-            elemento.style.color = "white";
+            elemento.style.color = "black";
         });
 
-        infoTexto.forEach((elemento) => {
-            elemento.style.backgroundColor = "#4c4a4a";
+
+
+        fondoProyectos.forEach((elemento) => {
+            elemento.style.backgroundColor = "#282828";
+        });
+
+        text2.forEach((elemento) => {
+            elemento.style.color = "#e9d5a1";
         });
 
     }
@@ -327,7 +351,13 @@ class Header extends React.Component {
             light: "claro",
             dark: "oscuro",
             saludo:"Hola :)",
-            about: "sobre mi:"
+            about: "sobre mi:",
+            h1Proyects: "proyectos",
+            h5Text: "pagina para EnglisHub",
+            pBox: "Este proyecto fue creado para un proyecto de mi escuela sobre la creacion de una aplicacion de windows form que te enseñe ingles, aunque tambien realice una pagina para este proyecto.",
+            pbox1: "pagina para el cbtis 225",
+            pbox2: "Este proyecto lo realice para darle un rediseño a la pagina del cbtis 225, ya que su diseño esta un poco inadecuado lo que causaba que fuera poco atractivo.",
+            BTN: "ver demo"
         },
         ingles: {
             text1: "I am a student of front-end oriented web programming",
@@ -341,7 +371,13 @@ class Header extends React.Component {
             light: "light",
             dark: "dark",
             saludo:"Hi :)",
-            about: "about:"
+            about: "about:",
+            h1Proyects: "proyects",
+            h5Text: "page for EnglishHub",
+            pBox: "This project was created for a project at my school about creating a Windows Form application that teaches you English, although I also made a page for this project.",
+            pbox1: "page for Cbtis 225",
+            pbox2: "I carried out this project to give a redesign to the cbtis 225 page, since its design is a little inadequate which caused it to be unattractive.",
+            BTN: "view demo"
         },
     };
 
@@ -358,6 +394,12 @@ class Header extends React.Component {
         var dark = document.querySelector(".pDark");
         var saludo = document.querySelector(".saludo");
         var about = document.querySelector(".txt-paf");
+        var h1Proyects = document.querySelector(".text-2");
+        var h5Text =  document.querySelector(".h5-text");
+        var pBox = document.querySelector(".p-box");
+        var pbox1 =  document.querySelector(".h5-cbtis");
+        var pbox2 =  document.querySelector(".pbox3");
+        var BTN = document.querySelector(".btn-demo");
 
 
         const traduccionesIdioma = this.traducciones[idioma];
@@ -374,7 +416,12 @@ class Header extends React.Component {
             light.innerHTML === traduccionesIdioma.light &&
             dark.innerHTML === traduccionesIdioma.dark &&
             saludo.innerHTML === traduccionesIdioma.saludo &&
-            about.innerHTML === traduccionesIdioma.about
+            about.innerHTML === traduccionesIdioma.about &&
+            h1Proyects.innerHTML === traduccionesIdioma.h1Proyects&&
+            h5Text.innerHTML === traduccionesIdioma.h5Text &&
+            pBox.innerHTML === traduccionesIdioma.pBox &&
+            pbox1.innerHTML === traduccionesIdioma.pBox1 && 
+            pbox2.innerHTML === traduccionesIdioma.pbox2
         ) {
             alert("El texto ya está traducido al " + idioma);
         } else {
@@ -389,7 +436,12 @@ class Header extends React.Component {
             light.innerHTML = traduccionesIdioma.light;
             dark.innerHTML = traduccionesIdioma.dark;
             saludo.innerHTML = traduccionesIdioma.saludo;
-            about.innerHTML = traduccionesIdioma.about
+            about.innerHTML = traduccionesIdioma.about;
+            h1Proyects.innerHTML = traduccionesIdioma.h1Proyects;
+            h5Text.innerHTML = traduccionesIdioma.h5Text;
+            pBox.innerHTML = traduccionesIdioma.pBox;
+            pbox1.innerHTML = traduccionesIdioma.pbox1;
+            pbox2.innerHTML = traduccionesIdioma.pbox2;
         }
     };
 
@@ -398,7 +450,7 @@ class Header extends React.Component {
             // seccion principal
             <div className="head-main">
                 <div className="navBar">
-                    <button className="btn1">proyectos</button>
+                    <button className="btn1" onClick={this.scrollToProyects}>proyectos</button>
                     <button className="btn2">contacto</button>
                     <button className="btn3" onClick={this.scrollToAbout}>acerca de mi</button>
 
@@ -409,7 +461,7 @@ class Header extends React.Component {
                         alt=""
                         className="code-image"
                     />
-                    <h1 className="h1">Hola, <span className="name">soy Evan</span>.</h1>
+                    <h1 className="h1">Hola, soy Evan.</h1>
                     <br />
                     <p className="paf">Soy estudiante de programacion web orientado al front-end</p>
                     <div className="light-night">
