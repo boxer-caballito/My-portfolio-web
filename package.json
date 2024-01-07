@@ -2,6 +2,7 @@
   "name": "my-portfolio-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://boxer-caballito.github.io/My-portfolio-web",
   "dependencies": {
     "@iconify/icons-logos": "^1.2.36",
     "@iconify/react": "^4.1.1",
@@ -9,6 +10,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "gh-pages": "^6.1.1",
+    "i": "^0.3.7",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,6 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
