@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.all {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+.data {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+}
+
+.GITHUB {
+    width: 45px;
+    position: relative;
+}
+
+.email {
+    width: 45px;
+}
+
+.BUTTONS {
+    width: 100px;
+    padding: 5px;
+    margin: 15px;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    border: solid 3px rgb(128, 127, 127);
+    transition: all .2s ease-in-out;
+}
+
+.BUTTONS:hover {
+    background-color: white;
+    color: #000;
+}
+

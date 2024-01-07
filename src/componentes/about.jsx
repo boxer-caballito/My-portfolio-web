@@ -22,7 +22,7 @@ class About extends React.Component {
     return (
       <div className="seccion-paf">
         <br/>
-        <h4 className="txt-paf" onClick={this.aplicarTraduccion}>Sobre mi:</h4>
+        <h4 className="txt-paf" onClick={this.aplicarTraduccion}>acerca de mi</h4>
       <div id="about-section" className="all-main">
         <div className="info-personal" data-aos="fade-right">
         <img  src={ImagenPersonal} className="image-personal" data-aos="fade-down"/>

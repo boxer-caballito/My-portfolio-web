@@ -24,11 +24,42 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <style>
+.loader {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #eee;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    </style>
     <title>PORTFOLIO WEB</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">loading...</div>
+    <div id="root">cargando...
+      <div class="loader">
+        <div class="circle"></div>
+      </div>    
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

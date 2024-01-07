@@ -15,6 +15,11 @@ class Header extends React.Component {
         const aboutSection = document.querySelector('.txt-proyects');
         aboutSection.scrollIntoView({ behavior: 'smooth' });
       };
+
+      scrollToContact = () => {
+        const aboutSection = document.querySelector('.title-contact');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      };
     
 
     //cambiar colores
@@ -37,6 +42,9 @@ class Header extends React.Component {
         let infoTexto = document.querySelectorAll(".info-text");
         let fondoProyectos = document.querySelectorAll(".all-content");
         let text2 = document.querySelectorAll(".text-2");
+        let contactTitle = document.querySelectorAll(".title-contact");
+        let email = document.querySelectorAll(".gmail");
+        let github = document.querySelectorAll(".github");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#e9d5a1";
@@ -162,6 +170,19 @@ class Header extends React.Component {
             elemento.style.color = "black";
         });
 
+        contactTitle.forEach((elemento) => {
+            elemento.style.color = "black";
+        })
+
+        
+        email.forEach((elemento) => {
+            elemento.style.color = "black";
+        })
+
+        github.forEach((elemento) => {
+            elemento.style.color = "black";
+        })
+
     }
 
     lightFondo = () => {
@@ -182,6 +203,9 @@ class Header extends React.Component {
         let infoTexto = document.querySelectorAll(".info-text");
         let fondoProyectos = document.querySelectorAll(".all-content");
         let text2 = document.querySelectorAll(".text-2");
+        let contactTitle = document.querySelectorAll(".title-contact");
+        let email = document.querySelectorAll(".gmail");
+        let github = document.querySelectorAll(".github");
     
         Fondos.forEach((elemento) => {
             elemento.style.backgroundColor = "#282828";
@@ -280,7 +304,7 @@ class Header extends React.Component {
         body.style.backgroundColor = "#bdbdbd";
 
         about.forEach((elemento) => {
-            elemento.style.color = "white";
+            elemento.style.color = "#e9d5a1";
         });
 
                 
@@ -305,6 +329,19 @@ class Header extends React.Component {
         text2.forEach((elemento) => {
             elemento.style.color = "#e9d5a1";
         });
+
+        contactTitle.forEach((elemento) => {
+            elemento.style.color = "white";
+        })
+
+        
+        email.forEach((elemento) => {
+            elemento.style.color = "white";
+        })
+
+        github.forEach((elemento) => {
+            elemento.style.color = "white";
+        })
 
     }
 
@@ -355,9 +392,12 @@ class Header extends React.Component {
             h1Proyects: "proyectos",
             h5Text: "pagina para EnglisHub",
             pBox: "Este proyecto fue creado para un proyecto de mi escuela sobre la creacion de una aplicacion de windows form que te enseñe ingles, aunque tambien realice una pagina para este proyecto.",
-            pbox1: "pagina para el cbtis 225",
             pbox2: "Este proyecto lo realice para darle un rediseño a la pagina del cbtis 225, ya que su diseño esta un poco inadecuado lo que causaba que fuera poco atractivo.",
-            BTN: "ver demo"
+            pbox3: "'Este proyecto fue realizado como una prueba para la construcción de una página web dedicada a enseñar conceptos clave en el hacking ético.'",
+            BTN: "ver demo",
+            h6title: "pagina sobre 'hacking etico'",
+            title1: "pagina para el cbtis 225",
+            h1contact: "Contacto"
         },
         ingles: {
             text1: "I am a student of front-end oriented web programming",
@@ -372,12 +412,15 @@ class Header extends React.Component {
             dark: "dark",
             saludo:"Hi :)",
             about: "about:",
-            h1Proyects: "proyects",
+            h1Proyects: "projects",
             h5Text: "page for EnglishHub",
             pBox: "This project was created for a project at my school about creating a Windows Form application that teaches you English, although I also made a page for this project.",
-            pbox1: "page for Cbtis 225",
             pbox2: "I carried out this project to give a redesign to the cbtis 225 page, since its design is a little inadequate which caused it to be unattractive.",
-            BTN: "view demo"
+            pbox3: "'This project was carried out as a test for the construction of a website dedicated to teaching key concepts in ethical hacking.'",
+            BTN: "view demo",
+            h6title: "page about 'ethical hacking'",
+            title1: "page for Cbtis 225",
+            h1contact: "Contact"
         },
     };
 
@@ -390,6 +433,7 @@ class Header extends React.Component {
         var h4 = document.querySelector(".h4");
         var parrafoElement = document.querySelector(".bb");
         var infoPersonal = document.querySelector(".main-h4");
+        //--------------------<
         var light = document.querySelector(".pLight");
         var dark = document.querySelector(".pDark");
         var saludo = document.querySelector(".saludo");
@@ -397,9 +441,11 @@ class Header extends React.Component {
         var h1Proyects = document.querySelector(".text-2");
         var h5Text =  document.querySelector(".h5-text");
         var pBox = document.querySelector(".p-box");
-        var pbox1 =  document.querySelector(".h5-cbtis");
         var pbox2 =  document.querySelector(".pbox3");
-        var BTN = document.querySelector(".btn-demo");
+        var pbox3 =  document.querySelector(".pbox4");
+        var h6title = document.querySelector(".h6-cbtis");
+        var title1 = document.querySelector(".title1");
+        var h1contact = document.querySelector(".title-contact");
 
 
         const traduccionesIdioma = this.traducciones[idioma];
@@ -420,8 +466,11 @@ class Header extends React.Component {
             h1Proyects.innerHTML === traduccionesIdioma.h1Proyects&&
             h5Text.innerHTML === traduccionesIdioma.h5Text &&
             pBox.innerHTML === traduccionesIdioma.pBox &&
-            pbox1.innerHTML === traduccionesIdioma.pBox1 && 
-            pbox2.innerHTML === traduccionesIdioma.pbox2
+            pbox2.innerHTML === traduccionesIdioma.pbox2 &&
+            pbox3.innerHTML === traduccionesIdioma.pbox3 &&
+            h6title.innerHTML === traduccionesIdioma.h6title &&
+            title1.innerHTML === traduccionesIdioma.title1 &&
+            h1contact.innerHTML === traduccionesIdioma.h1contact
         ) {
             alert("El texto ya está traducido al " + idioma);
         } else {
@@ -440,8 +489,11 @@ class Header extends React.Component {
             h1Proyects.innerHTML = traduccionesIdioma.h1Proyects;
             h5Text.innerHTML = traduccionesIdioma.h5Text;
             pBox.innerHTML = traduccionesIdioma.pBox;
-            pbox1.innerHTML = traduccionesIdioma.pbox1;
             pbox2.innerHTML = traduccionesIdioma.pbox2;
+            pbox3.innerHTML = traduccionesIdioma.pbox3;
+            h6title.innerHTML = traduccionesIdioma.h6title;
+            title1.innerHTML = traduccionesIdioma.title1;
+            h1contact.innerHTML = traduccionesIdioma.h1contact;
         }
     };
 
@@ -451,7 +503,7 @@ class Header extends React.Component {
             <div className="head-main">
                 <div className="navBar">
                     <button className="btn1" onClick={this.scrollToProyects}>proyectos</button>
-                    <button className="btn2">contacto</button>
+                    <button className="btn2" onClick={this.scrollToContact}>contacto</button>
                     <button className="btn3" onClick={this.scrollToAbout}>acerca de mi</button>
 
                 </div>

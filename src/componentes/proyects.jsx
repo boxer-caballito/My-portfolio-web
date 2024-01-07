@@ -28,6 +28,10 @@ class Proyects extends React.Component {
             this.props.onTraducir(this.props.idioma);
           }
         };
+
+        location4 = () => {
+            window.location.href = "https://qn2yp7.mimo.run/index.html";
+        } 
       
 
     render() {
@@ -48,7 +52,7 @@ class Proyects extends React.Component {
                             <hr/>
                             <h5 className="h5-text" onClick={this.aplicarTraduccion}>{this.props.title}</h5>
                             <br/>
-                            <p className="p-box">Este proyecto fue creado para un proyecto de mi escuela sobre la creacion de una aplicacion de windows form que te enseñe ingles, aunque tambien realice una pagina para este proyecto.</p>
+                            <p className="p-box" onClick={this.aplicarTraduccion}>Este proyecto fue creado para un proyecto de mi escuela sobre la creacion de una aplicacion de windows form que te enseñe ingles, aunque tambien realice una pagina para este proyecto.</p>
                             <hr className="line-top"/>
                             <button className="btn-demo" onClick={this.location1}>demo</button>
                             <button className="btn-github" onClick={this.location}>GITHUB</button>
@@ -63,9 +67,9 @@ class Proyects extends React.Component {
                         </div>
                         <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" className="svg2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M32 388.8h960V992H32z" fill="#FAD97F"></path><path d="M496 121.6l-100.8-60.8L496 0z" fill="#F2385A"></path><path d="M156.8 584h52.8v48H156.8zM156.8 500.8h52.8V552H156.8zM241.6 584h52.8v48h-52.8zM240 500.8h52.8V552H240z" fill="#FFFFFF"></path><path d="M124.8 468.8V664h201.6v-195.2H124.8z m168 83.2H240v-51.2h52.8V552z m-83.2 80H156.8v-48h52.8v48z m0-80H156.8v-51.2h52.8V552z m84.8 80h-52.8v-48h52.8v48z" fill=""></path><path d="M443.2 500.8H496V552h-52.8zM443.2 584H496v48h-52.8zM528 500.8h52.8V552H528zM528 584h52.8v48H528z" fill="#FFFFFF"></path><path d="M411.2 468.8V664h201.6v-195.2H411.2zM496 584v48h-52.8v-48H496z m-52.8-32v-51.2H496V552h-52.8z m84.8 80v-48h52.8v48H528z m52.8-80H528v-51.2h52.8V552z" fill=""></path><path d="M731.2 500.8H784V552h-52.8zM814.4 500.8h52.8V552h-52.8zM814.4 584h52.8v48h-52.8zM729.6 584h52.8v48h-52.8z" fill="#FFFFFF"></path><path d="M699.2 468.8V664h201.6v-195.2H699.2z m83.2 163.2h-52.8v-48h52.8v48z m1.6-80h-52.8v-51.2H784V552z m83.2 80h-52.8v-48h52.8v48z m0-80h-52.8v-51.2h52.8V552z" fill=""></path><path d="M427.2 808h169.6v184h-169.6z" fill="#FFFFFF"></path><path d="M528 356.8V0h-32v356.8H0V1024h1024V356.8H528zM596.8 992h-169.6v-184h169.6v184z m395.2 0H628.8V776H395.2v216H32V388.8h960V992z" fill=""></path></g></svg>
                             <hr/>
-                            <h5 className="h5-cbtis">{this.props.title2}</h5>
+                            <h5 className="title1" onClick={this.aplicarTraduccion}>pagina para el cbtis 225</h5>
                             <br/>
-                            <p className="pbox3">Este proyecto lo realice para darle un rediseño a la pagina del cbtis 225, ya que su diseño esta un poco inadecuado lo que causaba que fuera poco atractivo.</p>
+                            <p className="pbox3" onClick={this.aplicarTraduccion}>Este proyecto lo realice para darle un rediseño a la pagina del cbtis 225, ya que su diseño esta un poco inadecuado lo que causaba que fuera poco atractivo.</p>
                             <hr className="line-top"/>
                             <button className="btn-demo" onClick={this.location3}>demo</button>
                             <button className="btn-github" onClick={this.location2}>GITHUB</button>
@@ -82,12 +86,11 @@ class Proyects extends React.Component {
                         </div>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7.82959L18.6965 9.35641C20.239 10.7447 21.0103 11.4389 21.0103 12.3296C21.0103 13.2203 20.239 13.9145 18.6965 15.3028L17 16.8296" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M13.9868 5L12.9934 8.70743M11.8432 13L10.0132 19.8297" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M7.00005 7.82959L5.30358 9.35641C3.76102 10.7447 2.98975 11.4389 2.98975 12.3296C2.98975 13.2203 3.76102 13.9145 5.30358 15.3028L7.00005 16.8296" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                             <hr/>
-                            <h5>{this.props.title2}</h5>
+                            <h5 className="h6-cbtis" onClick={this.aplicarTraduccion}>pagina sobre 'hacking etico'</h5>
                             <br/>
-                            <p>Este proyecto lo realice para darle un rediseño a la pagina del "cbtis 225", ya que su diseño esta un poco inadecuado lo que causaba que fuera poco atractivo.</p>
+                            <p className="pbox4" onClick={this.aplicarTraduccion}>'Este proyecto fue realizado como una prueba para la construcción de una página web dedicada a enseñar conceptos clave en el hacking ético.'</p>
                             <hr className="line-top"/>
-                            <button className="btn-demo">demo</button>
-                            <button className="btn-github">GITHUB</button>
+                            <button className="btn-demo" onClick={this.location4}>demo</button>
                         </div>
                     </div>
                 </div>

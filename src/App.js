@@ -4,6 +4,7 @@ import './App.css';
 import Header from './componentes/header';
 import About from './componentes/about';
 import Proyects from './componentes/proyects';
+import Lata from './componentes/contact';
 import React from 'react';
 
 class App extends React.Component {
@@ -15,8 +16,8 @@ class App extends React.Component {
       <About/>
       <Proyects
       title="pagina para EnglisHub"
-      title2 = "pagina para el cbtis 225"
       />
+      <Lata/>
     </div>
     )
   }
