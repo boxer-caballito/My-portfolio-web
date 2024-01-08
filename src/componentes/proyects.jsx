@@ -41,7 +41,7 @@ class Proyects extends React.Component {
                 <h2 className="text-2" onClick={this.aplicarTraduccion}>proyectos</h2>
                 </div>
                 <div className="proyects-content">
-                    <div className="background" data-aos = "fade-left">
+                    <div className="background" data-aos = "fade-right">
                         <div className="proyect-1">
                             <div className="svg-group">
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#cb5757" d="M8 0a8 8 0 100 16A8 8 0 008 0z"></path></g></svg>
@@ -58,7 +58,7 @@ class Proyects extends React.Component {
                             <button className="btn-github" onClick={this.location}>GITHUB</button>
                         </div>
                     </div>
-                    <div className="background" data-aos = "fade-left">
+                    <div className="background" data-aos = "fade-right">
                         <div className="proyect-1">
                         <div className="svg-group">
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#cb5757" d="M8 0a8 8 0 100 16A8 8 0 008 0z"></path></g></svg>
@@ -77,7 +77,7 @@ class Proyects extends React.Component {
                     </div>
                 </div>
                 <div className="proyects-down">
-                <div className="background" data-aos = "fade-left">
+                <div className="background" data-aos = "fade-right">
                         <div className="proyect-1">
                         <div className="svg-group">
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#cb5757" d="M8 0a8 8 0 100 16A8 8 0 008 0z"></path></g></svg>
